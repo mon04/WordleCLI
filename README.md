@@ -1,1 +1,1 @@
-![Screenshot of WordleCLI](img1.png)
+<img src="img1.png" alt="Screenshot of WordleCLI" height="800"/>
