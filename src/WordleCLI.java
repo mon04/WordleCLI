@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class WordleCLI {
 
     private static final int NUM_TURNS = 6;
-    private static final String WORDLE = getRandomWord();
+    private static final String WORDLE = "WRUNG";//getRandomWord();
     private static final Row[] rows = new Row[NUM_TURNS];
 
     public static void main(String[] args) {
         //System.out.println(WORDLE);
+        System.out.println();
         Scanner scan = new Scanner(System.in);
         boolean won=false;
         int i=0;
@@ -33,6 +34,7 @@ public class WordleCLI {
         else
             System.out.println("You lose! :(");
         System.out.printf("The wordle was \"%s\"", WORDLE);
+        System.out.println();
     }
 
     private static void printRows() {
