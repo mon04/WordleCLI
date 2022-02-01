@@ -4,6 +4,6 @@ javac WordleCLI.java
 java WordleCLI
 ```
 
-<img src="img2.png" alt="Screenshot of WordleCLI" height="960"/>
+<img src="img2b.png" alt="Screenshot of WordleCLI" height="960"/>
 
 NOTE: This program works only in terminals that support <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape codes</a>.
