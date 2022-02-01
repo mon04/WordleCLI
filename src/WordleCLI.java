@@ -10,7 +10,6 @@ public class WordleCLI {
 
     public static void main(String[] args) {
         //System.out.println(WORDLE);
-        System.out.println();
         Scanner scan = new Scanner(System.in);
         boolean won=false;
         int i=0;
@@ -29,12 +28,11 @@ public class WordleCLI {
                 won=true;
             i++;
         }
+        System.out.printf("The wordle was \"%s\"\n", WORDLE);
         if(won)
-            System.out.printf("You won in %d/%d turns! :)\n", i, NUM_TURNS);
+            System.out.printf("%sYou won in %d/%d turns! :)%s\n",Ansi.GREEN, i, NUM_TURNS, Ansi.RESET);
         else
-            System.out.println("You lose! :(");
-        System.out.printf("The wordle was \"%s\"", WORDLE);
-        System.out.println();
+            System.out.printf("%sYou lose! :(%s\n\n", Ansi.RED, Ansi.RESET);
     }
 
     private static void printRows() {
