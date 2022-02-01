@@ -12,8 +12,10 @@ public class WordleCLI {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        System.out.println();
         //System.out.println(wordle+"\n");
-        for(int t=1; t <= NUM_TURNS; t++) {
+        int t=1;
+        for(; t <= NUM_TURNS; t++) {
             System.out.printf("Enter guess %d/%d: ", t, NUM_TURNS);
             String guess = scan.nextLine().toUpperCase();
             while (!guess.matches("[A-Z]{5}")) {
@@ -33,10 +35,11 @@ public class WordleCLI {
             }
         }
         if(hasWon)
-            System.out.println(Ansi.GREEN+"CONGRATULATIONS! YOU WIN."+Ansi.RESET);
+            System.out.printf("%sYou guessed the Wordle! (%d/%d guesses)%s\n", Ansi.GREEN, t, NUM_TURNS, Ansi.RESET);
         else
-            System.out.println(Ansi.RED+"SORRY! YOU LOSE."+Ansi.RESET);
-        System.out.print("THE WORD WAS: "+Ansi.YELLOW+"\""+wordle+"\""+Ansi.RESET+".");
+            System.out.printf("%sYou have not managed to guess the Wordle! (%d/%d guesses)%s\n", Ansi.RED, t, NUM_TURNS, Ansi.RESET);
+        System.out.printf("THE WORD WAS: \"%s\"", wordle);
+        System.out.println();
     }
 
     public static void evaluate(Cell[] guess) {
