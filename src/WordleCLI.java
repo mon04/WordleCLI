@@ -112,7 +112,7 @@ public class WordleCLI {
 
     public static String getRandomWord() {
         try {
-            Scanner scan = new Scanner(new File("src/wordles.txt"));
+            Scanner scan = new Scanner(new File("src/data/wordles.txt"));
             int size=2089;
             int r = (int)(Math.random() * size);
             int i=0;
