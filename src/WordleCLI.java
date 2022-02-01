@@ -94,7 +94,7 @@ public class WordleCLI {
     }
 
     public static void printBoard() {
-        System.out.print(Ansi.BLACK);
+        System.out.print(Ansi.RESET);
         System.out.println("+ - - - - - +");
         for(Cell[] row: board) {
             System.out.print("| ");
@@ -102,7 +102,7 @@ public class WordleCLI {
                 if(cell == null)
                     System.out.print("  ");
                 else
-                    System.out.print(cell+Ansi.BLACK.toString()+" ");
+                    System.out.print(cell+(Ansi.RESET+" "));
             }
             System.out.println("|");
         }
@@ -176,7 +176,7 @@ enum Ansi {
     GREEN ("\033[38;5;15;48;5;22m"),
     YELLOW ("\033[38;5;15;48;5;94m"),
     GRAY ("\033[37;48;5;234m"),
-    BLACK ("\033[0m"), //[37;40m
+    BLACK ("\033[37;40m"),
     RED ("\033[38;5;15;48;5;88m"),
     RESET ("\033[0m");
 
