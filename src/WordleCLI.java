@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class WordleCLI {
 
     private static final int NUM_TURNS = 6;
-    private static final String WORDLE = "WRUNG";//getRandomWord();
+    private static final String WORDLE = getRandomWord();
     private static final Row[] rows = new Row[NUM_TURNS];
 
     public static void main(String[] args) {
