@@ -9,7 +9,7 @@ public class Cell {
 
     public String toString() {
         if(state == null)
-            return " ";
+            return String.valueOf(this.value);
         return (state.getAnsiCode() + value);
     }
 
