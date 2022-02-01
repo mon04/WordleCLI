@@ -16,6 +16,11 @@ public class WordleCLI {
         for(int t=1; t <= NUM_TURNS; t++) {
             System.out.printf("Enter guess %d/%d: ", t, NUM_TURNS);
             String guess = scan.nextLine().toUpperCase();
+            while (!guess.matches("[A-Z]{5}")) {
+                System.out.println("Error! Your guess must be a five-letter word.");
+                System.out.printf("Enter guess %d/%d: ", t, NUM_TURNS);
+                guess = scan.nextLine().toUpperCase();
+            }
             Cell[] row = new Cell[guess.length()];
             for(int i=0; i < WORD_LENGTH; i++)
                 row[i] = new Cell(guess.charAt(i));
@@ -171,7 +176,7 @@ enum Ansi {
     GREEN ("\033[38;5;15;48;5;22m"),
     YELLOW ("\033[38;5;15;48;5;94m"),
     GRAY ("\033[37;48;5;234m"),
-    BLACK ("\033[37;40m"),
+    BLACK ("\033[0m"), //[37;40m
     RED ("\033[38;5;15;48;5;88m"),
     RESET ("\033[0m");
 
