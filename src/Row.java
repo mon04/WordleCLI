@@ -72,7 +72,7 @@ public class Row {
      *
      * @param wordle the answer against which to evaluate
      */
-    public void evaluate(String wordle) {
+    public void evaluateAgainst(String wordle) {
         char[] rowTemp = this.toCharArray();
         char[] wordleTemp = wordle.toCharArray();
         for(int i=0; i < length; i++) { // Determine greens

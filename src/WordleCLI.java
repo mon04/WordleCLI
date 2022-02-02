@@ -22,7 +22,7 @@ public class WordleCLI {
             }
             rows[i] = new Row(input);
             assert WORDLE != null : "Wordle is null";
-            rows[i].evaluate(WORDLE);
+            rows[i].evaluateAgainst(WORDLE);
             printRows();
             if(rows[i].equals(WORDLE))
                 won=true;
