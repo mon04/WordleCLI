@@ -30,9 +30,9 @@ public class WordleCLI {
         }
         System.out.printf("The wordle was \"%s\"\n", WORDLE);
         if(won)
-            System.out.printf("%sYou won in %d/%d turns! :)%s\n",Ansi.GREEN, i, NUM_TURNS, Ansi.RESET);
+            System.out.printf("%s You won in %d/%d turns! :) %s\n",Ansi.GREEN, i, NUM_TURNS, Ansi.RESET);
         else
-            System.out.printf("%sYou lose! :(%s\n\n", Ansi.RED, Ansi.RESET);
+            System.out.printf("%s You lose! :( %s\n\n", Ansi.RED, Ansi.RESET);
     }
 
     private static void printRows() {

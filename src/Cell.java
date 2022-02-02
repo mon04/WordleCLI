@@ -19,9 +19,9 @@ public class Cell {
      * @return cell's letter coloured by state with an ANSI escape code
      */
     public String visualised() {
-        if(state == null)
-            return String.valueOf(this.value);
-        return (state.getAnsiCode() + value);
+        if (state == null)
+            return " "+value+" ";
+        return String.format("%s %c ", state.getAnsiCode(), value);
     }
 
     /**

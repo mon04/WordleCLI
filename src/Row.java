@@ -43,9 +43,7 @@ public class Row {
         for(Cell cell: cells) {
             sb.append(cell.visualised());
             sb.append(Ansi.RESET);
-            sb.append(" ");
         }
-        sb.append("\b"); //remove trailing space
         return sb.toString();
     }
 
