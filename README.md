@@ -1,4 +1,4 @@
-This is a simplified clone of the polular online word-guessing game, <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a>. To run ```WordleCLI```, clone this repository and enter the following commands:
+This is a clone of the polular online word-guessing game, <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a>. To run ```WordleCLI```, clone this repository and enter the following commands:
 ```
 javac WordleCLI.java
 java WordleCLI
